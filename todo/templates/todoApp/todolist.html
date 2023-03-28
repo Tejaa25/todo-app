@@ -1,0 +1,19 @@
+{%extends "todoApp/base.html"%}
+{%block content%}
+    <h2>TODO-LIST</h2>
+    {%if obj%}
+    <table>
+    {%for o in obj%}
+    <tr>
+    <h3>{{o.title}}</h3>
+    <p>{{o.desc}}</p>
+    <i>{{o.date}}</i>
+    <a href="del/{{o.id}}"> delete</a>
+    </tr>
+    <br>
+    {%endfor%}
+    </table>
+    {%endif%}
+    <br>
+    <a href='add/' >click here to add</a>
+{%endblock%}
